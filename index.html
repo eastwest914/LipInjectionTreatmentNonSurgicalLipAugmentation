@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lip Filler | Premier Medical Spa in New York, NY</title>
+  <meta name="description" content="Enhance your natural beauty with expert Lip Filler and Hyaluronic Acid Lip Augmentation treatments at our modern Medical Spa in New York, NY.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --bg-light: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #334155;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: #ffffff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .brand-logo img {
+      height: 40px;
+      width: auto;
+      border-radius: 6px;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--text-main);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .nav-btn {
+      background-color: var(--primary);
+      color: #ffffff !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: var(--accent);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      padding: 5rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--primary);
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--bg-light);
+    }
+
+    /* Container Rules */
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .about-text ul {
+      list-style-type: none;
+      margin-top: 1rem;
+    }
+
+    .about-text ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .about-text ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Services Section */
+    .services-bg {
+      background-color: var(--bg-light);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* FAQ Section */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-answer {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-info {
+      background: var(--bg-light);
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+    }
+
+    .contact-info h3 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-details {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .contact-details strong {
+      color: var(--primary);
+      display: block;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.25rem;
+    }
+
+    .map-wrapper {
+      width: 100%;
+      height: 100%;
+      min-height: 350px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Keywords Section */
+    .keywords-section {
+      background-color: var(--bg-light);
+      border-top: 1px solid var(--border-color);
+      padding: 3rem 1.5rem;
+    }
+
+    .keywords-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none; /* Can be enhanced with mobile toggle if needed */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="brand-logo">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhs3KCxoIcKsTTDiHMcxQs5jksvTlh5EEbfC_ux3U3xrprDNz9KkX1sH18nV68WYxjrPeSE38OVB39x5F6o4OQDZdkJJQGUdYfHtDMBp8Ybn0GwVvnP9UcHax4fYJpzFWQSzlVTElIxqhDRKyDT0T0xUzSPVthBl36SARpIoxPom0pJvjaoJMW7pITmc8o/s1600/FdnOPA5Y.jpg" alt="Lip Filler Logo">
+        <span>Lip Filler</span>
+      </a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="tel:9295713858" class="nav-btn">Call (929) 571-3858</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Lip Injection Treatment | Non-Surgical Lip Augmentation</h1>
+        <p>Your premier destination for natural lip enhancement, plump lips, and hyaluronic acid lip fillers in New York, NY.</p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn-primary">Explore Our Services</a>
+          <a href="#contact" class="btn-secondary">Book Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;">Premier Medical Spa in NYC</h2>
+          <p>Welcome to <strong>Lip Filler</strong>, a boutique <a href="https://www.selfiehousenyc.com/"><strong>Medical Spa</strong></a> located in the heart of Midtown Manhattan, New York. We specialize in advanced aesthetic treatments, offering non-surgical lip augmentation designed to refine, define, and enhance your smile naturally.</p>
+          <p>Our team focuses on subtle, elegant results tailored to your unique facial features. Utilizing premium <a href="https://www.google.com/maps?cid=14235254930435586457"><strong>Hyaluronic Acid Lip Filler</strong></a> formulations, we deliver long-lasting hydration, symmetry, and youthful fullness in a safe, clinical setting.</p>
+          <ul>
+            <li>Customized treatment plans tailored to your goal</li>
+            <li>Board-certified aesthetic professionals</li>
+            <li>Focus on natural lip enhancement and balance</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://images.squarespace-cdn.com/content/v1/631fe89bb73893428e0f66a8/fb78f848-7602-4199-88bf-2581b1725503/mathilde-langevin-FDRaYqiTY1k-unsplash.jpg?format=500w" alt="Natural Lip Enhancement Treatment">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-bg">
+      <div class="section-container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <div class="card">
+            <h3>Lip Augmentation</h3>
+            <p>Precise dermal filler injections designed to restore volume, correct asymmetry, and create a soft, plump finish tailored to your style.</p>
+          </div>
+          <div class="card">
+            <h3>Hyaluronic Acid Lip Filler</h3>
+            <p>Utilizing high-grade hyaluronic acid formulas to ensure soft, natural-feeling lips with excellent hydration and structural support.</p>
+          </div>
+          <div class="card">
+            <h3>Natural Lip Enhancement</h3>
+            <p>Subtle, conservative lip shaping focused on defining the Cupid's bow and border without adding excessive volume.</p>
+          </div>
+          <div class="card">
+            <h3>Medical Spa Consultations</h3>
+            <p>Comprehensive aesthetic assessments to evaluate facial harmony and design a customized lip injection treatment plan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section id="why" class="section-container">
+      <h2 class="section-title">Why Choose Lip Filler?</h2>
+      <div class="services-grid">
+        <div class="card">
+          <h3>Expert Precision</h3>
+          <p>Our skilled injectors specialize strictly in facial aesthetics and advanced lip symmetry techniques.</p>
+        </div>
+        <div class="card">
+          <h3>Natural-Looking Results</h3>
+          <p>We avoid overly artificial looks, focusing on creating plump lips that complement your natural facial structure.</p>
+
+        </div>
+        <div class="card">
+          <h3>Safe & Clinical Environment</h3>
+          <p>As a leading Medical Spa, we prioritize sterile procedures, top-tier FDA-approved products, and complete client comfort.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="services-bg">
+      <div class="section-container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">What is Hyaluronic Acid Lip Filler?</div>
+            <div class="faq-answer">Hyaluronic acid is a naturally occurring substance in the body that attracts and retains moisture. When used as a lip filler, it temporarily adds shape, structure, and volume to the lips safely and predictably.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">How long do lip augmentation results typically last?</div>
+            <div class="faq-answer">Most hyaluronic acid lip filler treatments last anywhere from 6 to 12 months, depending on your individual metabolism and the specific product used.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Is lip injection treatment painful?</div>
+            <div class="faq-answer">Minimal discomfort is involved. We apply a medical-grade topical numbing cream prior to injection, and most fillers also contain a built-in anesthetic (lidocaine) for a smooth experience.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">What is the downtime after getting lip fillers?</div>
+            <div class="faq-answer">Downtime is minimal. You may experience minor swelling or bruising for 24 to 48 hours post-treatment, but most clients resume normal daily activities immediately.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Can lip fillers be dissolved if I change my mind?</div>
+            <div class="faq-answer">Yes, hyaluronic acid fillers can easily be dissolved using a specialized enzyme called hyaluronidase, offering complete peace of mind.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-container">
+      <h2 class="section-title">Contact Information</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Lip Filler</h3>
+          <ul class="contact-details">
+            <li>
+              <strong>Address</strong>
+              109 W 38th St b1202, New York, NY 10018
+            </li>
+            <li>
+              <strong>Phone</strong>
+              <a href="tel:9295713858">(929) 571-3858</a>
+            </li>
+            <li>
+              <strong>Website</strong>
+              <a href="https://www.selfiehousenyc.com/" target="_blank" rel="noopener">https://www.selfiehousenyc.com/</a>
+            </li>
+            <li>
+              <strong>Primary Category</strong>
+              Medical Spa
+            </li>
+          </ul>
+        </div>
+        <div class="map-wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.4230119152608!2d-73.98636880000001!3d40.75271999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a6a8542a1ce7%3A0xc58dc8f007bdb999!2sLip%20Filler!5e0!3m2!1sen!2s!4v1788957381370!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Keywords Tags -->
+    <section class="keywords-section">
+      <div class="section-container" style="padding-top: 0; padding-bottom: 0;">
+        <h3 style="text-align: center; font-size: 1.1rem; color: var(--primary);">Related Specialties</h3>
+        <div class="keywords-tags">
+          <span class="tag">Lip Filler</span>
+          <span class="tag">Lip Augmentation</span>
+          <span class="tag">Hyaluronic Acid Lip Filler</span>
+          <span class="tag">Plump Lips</span>
+          <span class="tag">Natural Lip Enhancement</span>
+          <span class="tag">Medical Spa</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Lip Filler. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
